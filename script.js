@@ -4,7 +4,6 @@ window.addEventListener("DOMContentLoaded", function () {
   const cantidadInput = formulario.elements.namedItem("Cantidad");
   const precioInput = formulario.elements.namedItem("precio-unitario");
   const totalInput = formulario.elements.namedItem("total");
-  const resumen = document.querySelector(".resumen");
 
   totalInput.readOnly = true;
 
