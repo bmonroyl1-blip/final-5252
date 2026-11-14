@@ -1,8 +1,10 @@
 window.addEventListener("DOMContentLoaded", function () {
   const formulario = document.getElementById("formulario");
+  const nombreInput = formulario.elements.namedItem("Nombre");
   const cantidadInput = formulario.elements.namedItem("Cantidad");
   const precioInput = formulario.elements.namedItem("precio-unitario");
   const totalInput = formulario.elements.namedItem("total");
+  const resumen = document.querySelector(".resumen");
 
   totalInput.readOnly = true;
 
@@ -23,5 +25,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     totalInput.value = (cantidad * precioUnitario).toFixed(2);
+      alert
+("El total a pagar de " + nombreInput.value.trim() + " es: " + totalInput.value);
   });
 });
