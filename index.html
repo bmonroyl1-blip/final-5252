@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="<?= h($_SESSION['csrf']) ?>">
+  <title>"Calculadora"</title>
+</head>
+<body>
+  <header class="cabecera"><div class="contenedor">
+    <h1>Calculadora simple de Total a Pagar</h1>
+  </div></header>
+  <main class="contenedor">
+    <section class="resumen" aria-label="Resumen"></section>
+    <section class="tarjeta" aria-labelledby="titulo-formulario">
+      <form id="formulario">
+        <input type="hidden" name="id" id="registro-id">
+        <div class="rejilla">
+        <P>Nombre</P>
+            <input name="Nombre" type="text" placeholder="Nombre">
+            <p>Cantidad</p>
+          <input name="Cantidad" type="text" placeholder="Cantidad">
+          <p>Precio Unitario</p>
+          <input name="precio-unitario" type="text" placeholder="Precio Unitario">
+          <p>Total</p>
+          <input name="total" type="text" placeholder="Total">
+        </div>
+        <div class="calculo"><button type="submit" id="calcula">calcular</button></div>
+      </form>
+    </section>
+  </main>
+  <footer class="contenedor">Parcial Final por Bryan Monroy Carnet:0909-24-5252</footer>
+  <script id="campos-json" type="application/json"><?= json_encode($config['campos'], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
