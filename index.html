@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="<?= h($_SESSION['csrf']) ?>">
-  <title>"Calculadora"</title>
-  "<link rel="stylesheet" href="Styles.css">"
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="Styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <header class="cabecera"><div class="contenedor">
@@ -31,7 +32,5 @@
     </section>
   </main>
   <footer class="contenedor">Parcial Final por Bryan Monroy Carnet:0909-24-5252</footer>
-  <script id="campos-json" type="application/json"><?= json_encode($config['campos'], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>
-  <script src="assets/app.js" defer></script>
 </body>
 </html>
